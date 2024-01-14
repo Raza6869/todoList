@@ -10,8 +10,6 @@ const config: Config = {
     extend: {
       colors: {
         brightBlue: "hsl(220, 98%, 61%)",
-        checkBackground:
-          "linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)",
         veryLightGray: "hsl(0, 0%, 98%)",
         veryLightGrayishBlue: "hsl(236, 33%, 92%)",
         lightGrayishBlue: "hsl(233, 11%, 84%)",
@@ -25,6 +23,13 @@ const config: Config = {
         darkGrayishBlueDarkTheme: "hsl(234, 11%, 52%)",
         veryDarkGrayishBlueDarkTheme1: "hsl(233, 14%, 35%)",
         veryDarkGrayishBlueDarkTheme2: "hsl(237, 14%, 26%)",
+
+        checkBackground1: "hsl(192, 100%, 67%)",
+        checkBackground2: "hsl(280, 87%, 65%)",
+      },
+      backgroundImage: {
+        checkBackground:
+          "linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)",
       },
     },
   },

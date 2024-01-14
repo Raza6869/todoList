@@ -2,15 +2,18 @@
 import Image from "next/image";
 //components
 import Header from "./components/Header";
-//media
-import bgDesktopLight from "@/images/bg-desktop-light.jpg";
+import Dashboard from "./components/Dashboard";
 
 export default function Home() {
   return (
-    <main className="bg-veryLightGray">
-      <Image src={bgDesktopLight} alt="background" className="" />
-      <div className="-mt-56 px-[400px]">
+    <main className=" bg-veryLightGray">
+      <div className="background-light"></div>
+      <div className="px-[400px] -mt-48 h-screen">
         <Header />
+        <Dashboard />
+        <p className=" text-darkGrayishBlue text-sm flex justify-center mt-10">
+          Drag and drop to record list
+        </p>
       </div>
     </main>
   );

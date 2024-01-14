@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.background-light {
+  @apply bg-[url("../images/bg-desktop-light.jpg")] h-64 w-full block top-0 bg-fixed;
+}
+
+.dobox-light {
+  @apply bg-veryLightGray shadow-lg shadow-darkGrayishBlue/30 text-veryDarkBlue w-full rounded-lg px-5 gap-6 flex justify-start items-center h-14;
+}

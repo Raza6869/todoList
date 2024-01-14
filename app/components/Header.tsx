@@ -2,6 +2,7 @@
 import Image from "next/image";
 //media
 import themeSunIcon from "@/images/icon-sun.svg";
+import themeMoonIcon from "@/images/icon-moon.svg";
 
 export default function Header() {
   return (
@@ -9,7 +10,7 @@ export default function Header() {
       <h1 className="text-veryLightGray tracking-widest font-bold text-3xl">
         T O D O
       </h1>
-      <Image src={themeSunIcon} alt="theme icon" />
+      <Image src={themeMoonIcon} alt="theme icon" />
     </header>
   );
 }
