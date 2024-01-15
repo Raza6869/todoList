@@ -7,5 +7,13 @@
 }
 
 .dobox-light {
-  @apply bg-veryLightGray shadow-lg shadow-darkGrayishBlue/30 text-veryDarkBlue w-full rounded-lg px-5 gap-6 flex justify-start items-center h-14;
+  @apply bg-veryLightGray shadow-lg shadow-darkGrayishBlue/30 text-veryDarkBlue w-full rounded-lg px-5 gap-6 flex justify-between items-center h-14;
+}
+
+.filter-li {
+  @apply cursor-pointer hover:font-bold;
+}
+
+.filter-li-active {
+  @apply cursor-pointer font-bold;
 }
