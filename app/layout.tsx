@@ -19,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={josefinSans.className}>{children}</body>
+      <body suppressHydrationWarning={true} className={josefinSans.className}>
+        {children}
+      </body>
     </html>
   );
 }

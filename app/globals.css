@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .background-light {
-  @apply bg-[url("../images/bg-desktop-light.jpg")] h-64 w-full block top-0 bg-fixed;
+  @apply bg-[url("../images/bg-desktop-light.jpg")] h-64 w-full block top-0 bg-fixed bg-center bg-cover;
 }
 
 .dobox-light {

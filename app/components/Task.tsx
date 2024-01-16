@@ -3,37 +3,23 @@ import { useContext } from "react";
 import Image from "next/image";
 //context
 import TasksContext from "../context/TasksContext";
-//components
-import Analythics from "./Analythics";
 //media
-import checkIcon from "@/images/icon-check.svg";
 import deleteIcon from "@/images/icon-cross.svg";
+import checkIcon from "@/images/icon-check.svg";
 
-export default function List() {
-  const { list, setList, filter } = useContext(TasksContext);
+export default function Task() {
+  const { list, setList, allList, setAllList } = useContext(TasksContext);
 
   function handleToggleList(taskId: number, completed: boolean) {
-    const myList = [...list];
+    const myList = [...allList];
     const task: any = myList.find((t) => t.id === taskId);
     task.isCompleted = completed;
-    setList(myList);
+    setAllList(myList);
   }
-
-  const filterCheck = (filter: string) => {
-    const filterParam = filter;
-    if (filterParam === "All") {
-    } else if (filterParam === "Active") {
-      setList([...list.filter((l) => l.isCompleted === false)]);
-    } else if (filterParam === "Completed") {
-      setList([...list.filter((l) => l.isCompleted === true)]);
-    }
-
-    return list;
-  };
 
   return (
     <ul className="mt-6 flex flex-col gap-1">
-      {filterCheck(filter).map((l) => (
+      {list.map((l) => (
         <li key={l.id}>
           <label className="dobox-light group/taskBox">
             <div className="flex items-center justify-start gap-6">
@@ -66,8 +52,6 @@ export default function List() {
           </label>
         </li>
       ))}
-
-      <Analythics />
     </ul>
   );
 }

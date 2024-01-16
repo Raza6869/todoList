@@ -10,11 +10,13 @@ export interface ListArrayTypes {
 interface TasksTypes {
   filter: string;
   list: ListArrayTypes[];
+  allList: ListArrayTypes[];
   name: string;
   listId: number;
   isCompleted: boolean;
   setFilter: Dispatch<SetStateAction<string>>;
   setList: Dispatch<SetStateAction<ListArrayTypes[]>>;
+  setAllList: Dispatch<SetStateAction<ListArrayTypes[]>>;
   setName: Dispatch<SetStateAction<string>>;
   setListId: Dispatch<SetStateAction<number>>;
 }

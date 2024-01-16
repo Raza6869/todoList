@@ -10,18 +10,21 @@ interface ProviderTypes {
 
 export default function TaskProvider({ children }: ProviderTypes) {
   const [filter, setFilter] = useState("All");
-  const [list, setList] = useState<Array<ListArrayTypes>>([]);
+  const [allList, setAllList] = useState<Array<ListArrayTypes>>([]);
+  const [list, setList] = useState<Array<ListArrayTypes>>([...allList]);
   const [name, setName] = useState("");
   let isCompleted = false;
   const [listId, setListId] = useState(0);
   return (
     <TasksContext.Provider
       value={{
+        allList,
         filter,
         list,
         listId,
         name,
         isCompleted,
+        setAllList,
         setFilter,
         setList,
         setName,
