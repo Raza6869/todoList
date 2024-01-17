@@ -6,8 +6,20 @@
   @apply bg-[url("../images/bg-desktop-light.jpg")] h-64 w-full block top-0 bg-fixed bg-center bg-cover;
 }
 
+.background-dark {
+  @apply bg-[url("../images/bg-desktop-dark.jpg")] h-64 w-full block top-0 bg-fixed bg-center bg-cover;
+}
+
 .dobox-light {
   @apply bg-veryLightGray shadow-lg shadow-darkGrayishBlue/30 text-veryDarkBlue w-full rounded-lg px-5 gap-6 flex justify-between items-center h-14;
+}
+
+.dobox-dark {
+  @apply bg-veryDarkDesaturatedBlue shadow-lg shadow-veryLightGray/30 text-veryLightGray w-full rounded-lg px-5 gap-6 flex justify-between items-center h-14;
+}
+
+.dobox-dark-add {
+  @apply bg-veryDarkDesaturatedBlue  text-veryLightGray w-full rounded-lg px-5 gap-6 flex justify-between items-center h-14;
 }
 
 .filter-li {
@@ -15,5 +27,5 @@
 }
 
 .filter-li-active {
-  @apply cursor-pointer font-bold;
+  @apply cursor-pointer font-bold text-brightBlue;
 }

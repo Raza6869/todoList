@@ -5,10 +5,13 @@ import Image from "next/image";
 import TasksContext from "../context/TasksContext";
 //media
 import deleteIcon from "@/images/icon-cross.svg";
+import deleteDarkIcon from "@/images/icon-cross-dark.svg";
 import checkIcon from "@/images/icon-check.svg";
+import ThemeContext from "../context/ThemeContext";
 
 export default function Task() {
   const { list, setList, allList, setAllList } = useContext(TasksContext);
+  const { theme } = useContext(ThemeContext);
 
   function handleToggleList(taskId: number, completed: boolean) {
     const myList = [...allList];
@@ -21,7 +24,13 @@ export default function Task() {
     <ul className="mt-6 flex flex-col gap-1">
       {list.map((l) => (
         <li key={l.id}>
-          <label className="dobox-light group/taskBox">
+          <label
+            className={
+              theme === "light"
+                ? "dobox-light group/taskBox"
+                : "dobox-dark group/taskBox"
+            }
+          >
             <div className="flex items-center justify-start gap-6">
               <input
                 type="checkbox"
@@ -44,9 +53,12 @@ export default function Task() {
               </p>
             </div>
             <Image
-              src={deleteIcon}
+              src={theme === "light" ? deleteIcon : deleteDarkIcon}
               alt="delete icon"
-              onClick={() => setList(list.filter((f) => f.id !== l.id))}
+              onClick={() => {
+                setList(list.filter((f) => f.id !== l.id));
+                setAllList(allList.filter((f) => f.id !== l.id));
+              }}
               className="h-4 w-fit invisible group-hover/taskBox:visible cursor-pointer"
             />
           </label>

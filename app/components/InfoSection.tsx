@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import TasksContext from "../context/TasksContext";
+import ThemeContext from "../context/ThemeContext";
 
 export default function InfoSection() {
   const { allList, setAllList, setFilter, filter, setList, list } =
     useContext(TasksContext);
+  const { theme } = useContext(ThemeContext);
 
   const taskAmount = allList.length;
 

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import TasksContext from "../context/TasksContext";
+import ThemeContext from "../context/ThemeContext";
 
 export default function AddTask() {
   const {
@@ -14,8 +15,10 @@ export default function AddTask() {
     list,
   } = useContext(TasksContext);
 
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="dobox-light">
+    <div className={theme === "light" ? "dobox-light" : "dobox-dark-add"}>
       <button
         onClick={() => {
           setListId(listId + 1);
