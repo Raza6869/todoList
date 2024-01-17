@@ -15,7 +15,7 @@
 }
 
 .dobox-dark {
-  @apply bg-veryDarkDesaturatedBlue shadow-lg shadow-veryLightGray/30 text-veryLightGray w-full rounded-lg px-5 gap-6 flex justify-between items-center h-14;
+  @apply bg-veryDarkDesaturatedBlue shadow-sm  shadow-veryLightGray/30 text-veryLightGray w-full rounded-lg px-5 gap-6 flex justify-between items-center h-14;
 }
 
 .dobox-dark-add {
@@ -28,4 +28,20 @@
 
 .filter-li-active {
   @apply cursor-pointer font-bold text-brightBlue;
+}
+
+.info-section-light {
+  @apply h-10 text-sm sm:mt-0 mt-4 flex items-center sm:justify-between justify-center px-4 text-darkGrayishBlue bg-veryLightGray shadow-sm shadow-darkGrayishBlue/30;
+}
+
+.infoMobile-section-light {
+  @apply h-10 text-sm flex items-center justify-between px-4 text-darkGrayishBlue bg-veryLightGray shadow-sm shadow-darkGrayishBlue/30;
+}
+
+.info-section-dark {
+  @apply h-10 text-sm sm:mt-0 mt-4 flex items-center sm:justify-between justify-center px-4 text-darkGrayishBlue bg-veryDarkDesaturatedBlue shadow-sm shadow-darkGrayishBlue/30;
+}
+
+.infoMobile-section-dark {
+  @apply h-10 text-sm flex items-center justify-between px-4 text-darkGrayishBlue bg-veryDarkDesaturatedBlue shadow-sm shadow-darkGrayishBlue/30;
 }

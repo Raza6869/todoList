@@ -8,6 +8,9 @@ import deleteIcon from "@/images/icon-cross.svg";
 import deleteDarkIcon from "@/images/icon-cross-dark.svg";
 import checkIcon from "@/images/icon-check.svg";
 import ThemeContext from "../context/ThemeContext";
+import InfoSection from "./InfoSection";
+import { DeviceSize } from "../utils/DeviceSize";
+import MobileInfoSection from "./MobileInfoSection";
 
 export default function Task() {
   const { list, setList, allList, setAllList } = useContext(TasksContext);
@@ -64,6 +67,8 @@ export default function Task() {
           </label>
         </li>
       ))}
+      {DeviceSize() <= 648 && <MobileInfoSection />}
+      <InfoSection />
     </ul>
   );
 }

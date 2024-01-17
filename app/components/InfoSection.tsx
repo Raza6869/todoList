@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import TasksContext from "../context/TasksContext";
 import ThemeContext from "../context/ThemeContext";
+import { DeviceSize } from "../utils/DeviceSize";
 
 export default function InfoSection() {
   const { allList, setAllList, setFilter, filter, setList, list } =
@@ -10,8 +11,12 @@ export default function InfoSection() {
   const taskAmount = allList.length;
 
   return (
-    <div className="h-10 text-sm flex items-center justify-between px-4 text-darkGrayishBlue bg-veryLightGray shadow-lg shadow-darkGrayishBlue/30">
-      <p>{taskAmount} items left</p>
+    <div
+      className={theme === "light" ? "info-section-light" : "info-section-dark"}
+    >
+      <p className={DeviceSize() <= 648 ? "hidden" : "visible"}>
+        {taskAmount} items left
+      </p>
       <ul className="flex gap-2">
         <li
           className={filter === "All" ? "filter-li-active" : "filter-li"}
@@ -42,7 +47,11 @@ export default function InfoSection() {
         </li>
       </ul>
       <p
-        className="hover:font-bold hover:cursor-pointer"
+        className={
+          DeviceSize() <= 648
+            ? "hidden"
+            : "hover:font-bold hover:cursor-pointer"
+        }
         onClick={() => {
           setList(list.filter((l) => l.isCompleted === false));
           setAllList(list.filter((l) => l.isCompleted === false));
