@@ -28,5 +28,29 @@ Your users should be able to:
 - Toggle light and dark mode
 - **Bonus**: Drag and drop to reorder items on the list
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Links
 
+- Solution URL: [https://github.com/Raza6869/todoList]
+- Live Site URL: [https://todo-list-beta-lemon.vercel.app/]
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Desktop-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [TailwindCSS](https://tailwindcss.com/) - For styles
+- [TypeScript](https://www.typescriptlang.org/) - for javascript type organization
+
+### What I learned
+
+This project helped me a lot with Array managment. Knowledge of Array manipulation it's essential and I didn't pratice that much, this project gave me this slap on my face: "Go pratice Array, you Dumb!". So now, I feel really happy to increase this skills, made me feel more confident and confortable to do professional coding.
+
+## Author
+
+- Frontend Mentor - [@Raza6869](https://www.frontendmentor.io/profile/Raza6869)
+- Instagram - [@rafa_thumaza](https://www.instagram.com/rafa_thumaza/)
